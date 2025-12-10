@@ -1,12 +1,16 @@
 # 🛡️ Enterprise Identity Governance & Administration (IGA) Architecture
 ### Automated Just-In-Time (JIT) Access & Lifecycle Management
 
+&nbsp;
+
 ## 🚀 Executive Summary
 In modern Zero Trust environments, "Standing Access" (permanent permissions) is a primary vulnerability. To mitigate this, I architected an **Automated Governance Framework** using **Microsoft Entra ID Governance**.
 
 This project replaces manual ticket processing with a **Self-Service JIT Workflow** that allows IT personnel to request temporary, privileged access to sensitive Finance resources. The solution enforces **Segregation of Duties (SoD)**, mandates **Business Justification**, and executes a strict **7-Day Eviction Policy** to ensure Least Privilege compliance (NIST 800-53, AC-2).
 
 ---
+
+&nbsp;
 
 ## ⚡ Key Features Implemented
 * **Segregation of Duties (SoD):** Access requests are strictly scoped to the "IT Team," preventing unauthorized departments (HR, Sales) from even seeing the package.
@@ -15,6 +19,8 @@ This project replaces manual ticket processing with a **Self-Service JIT Workflo
 * **Human-in-the-Loop:** Automated provisioning is paused until a Manager/Admin explicitly approves the request.
 
 ---
+
+&nbsp;
 
 ## 📸 Architecture & Configuration
 
@@ -30,6 +36,8 @@ I configured the **Access Package** to enforce strict entry requirements.
 
 ---
 
+&nbsp;
+
 ### Phase 2: Lifecycle & Eviction (The "Time Bomb")
 To prevent "Digital Hoarding," I implemented a rigid expiration policy.
 * **Expiration:** 7 Days.
@@ -43,12 +51,16 @@ To prevent "Digital Hoarding," I implemented a rigid expiration policy.
 
 ## 🧪 Operational Workflow (User Experience)
 
+&nbsp;
+
 ### Step 1: Self-Service Request & Audit Capture
 The IT user (`Joseph Thomas`) logs into the MyAccess portal. He must provide a valid business reason (`Urgent Audit for Ticket #999`) to proceed. This data is logged for future audits.
 
 <img width="490" height="456" alt="Self-Service Request Portal-3" src="https://github.com/user-attachments/assets/4cd9473d-ed8c-462c-bb29-e056f45a799e" />
 
 *Figure 3: Enforcing mandatory business justification before submission.*
+
+&nbsp;
 
 ### Step 2: Administrative Approval
 The request triggers a notification to the Identity Administrator. Access is **not** granted until this approval step is completed.
@@ -68,6 +80,8 @@ Immediately upon approval, the Entra ID Governance engine automatically injected
 
 *Figure 5: Verification that Joseph Thomas was added to the Finance Team group.*
 
+&nbsp;
+
 ### JIT Policy Enforcement
 The system stamped a hard expiration date on the assignment. On **12/16/2025**, the user will be automatically removed, ensuring the environment returns to a secure state.
 
@@ -76,6 +90,9 @@ The system stamped a hard expiration date on the assignment. On **12/16/2025**, 
 *Figure 6: The "Assignments" log proving the access is time-bound (Expires 12/16/2025).*
 
 ---
+
+&nbsp;
+
 
 ## 🏆 Project Outcome
 * **Risk Reduction:** Reduced the attack surface by moving 100% of ad-hoc administrative access to a time-bound model.
